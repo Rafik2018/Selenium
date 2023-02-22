@@ -20,7 +20,7 @@ public class LaunchBrowser {
         Thread.sleep(3000);// slow down for 3 seconds
 
         driver.quit();      // or  driver.close();  will close the one browser
-                            //  driver.quit();      will close whole whole tab
+                            //  driver.quit();      will close  whole tab
 
 
 
