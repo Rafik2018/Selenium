@@ -1,0 +1,6 @@
+
+
+
+ String URL = driver.getCurrentUrl();
+
+  String title = driver.getTitle();
