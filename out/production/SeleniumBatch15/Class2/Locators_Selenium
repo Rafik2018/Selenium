@@ -1,0 +1,127 @@
+
+Locator strategies in Selenium:
+
+
+Ways to identify one or more specific elements in the DOM.
+A locator is a way to identify elements on a page. It is the argument passed to the Finding element methods.
+
+Check out our encouraged test practices for tips on locators,
+including which to use when and why to declare locators separately from the finding methods.
+
+
+--Traditional Locators--
+
+Selenium provides support for these 8 traditional location strategies in WebDriver:
+
+
+ --Locator--	                                                    --Description--
+
+class name	               Locates elements whose class name contains the search value(compound class names are not permitted)
+css selector               Locates elements matching a CSS selector
+id	                       Locates elements whose ID attribute matches the search value
+name	                   Locates elements whose NAME attribute matches the search value
+link text                  Locates anchor elements whose visible text matches the search value
+partial link text          Locates anchor elements whose visible text contains the search value. If multiple elements are matching,
+                           only the first one will be selected.
+tag name                   Locates elements whose tag name matches the search value
+xpath                      Locates elements matching an XPath expression
+
+
+
+                                       --Coding Help--
+
+Note:
+This section could use some updated code examplesof selecting elements using each locator strategy
+Check our contribution guidelines and code example formats if you’d like to help.
+
+
+
+
+
+Relative Locators:
+
+
+Relative Locators
+Selenium 4 introduces Relative Locators (previously called as Friendly Locators).
+These locators are helpful when it is not easy to construct a locator for the desired element,
+but easy to describe spatially where the element is in relation to an element that does have an easily constructed locator.
+
+How it works:
+Selenium uses the JavaScript function getBoundingClientRect() to determine the size and position of elements on the page,
+and can use this information to locate neighboring elements.find the relative elements.
+
+Relative locator methods can take as the argument for the point of origin, either a previously located element reference,
+or another locator. In these examples we’ll be using locators only,
+but you could swap the locator in the final method with an element object and it will work the same.
+
+Let us consider the below example for understanding the relative locators
+
+
+Email adress:
+Password:
+
+
+
+
+Available relative locators:
+
+
+Above:
+
+Description:
+If the email text field element is not easily identifiable for some reason, but the password text field element is,
+we can locate the text field element using the fact that it is an “input” element “above” the password element.
+
+
+By emailLocator = RelativeLocator.with(By.tagName("input")).above(By.id("password"));
+-------------------------------------------------------------------------------------------------------------------
+
+Below:
+
+Description:
+If the password text field element is not easily identifiable for some reason, but the email text field element is,
+we can locate the text field element using the fact that it is an “input” element “below” the email element.
+
+
+By cancelLocator = RelativeLocator.with(By.tagName("button")).toLeftOf(By.id("submit"));
+---------------------------------------------------------------------------------------------------------------------
+
+Right of:
+
+Description:
+If the submit button is not easily identifiable for some reason, but the cancel button element is,
+we can locate the submit button element using the fact that it is a “button” element “to the right of” the cancel element.
+
+
+By submitLocator = RelativeLocator.with(By.tagName("button")).toRightOf(By.id("cancel"));
+-----------------------------------------------------------------------------------------------------------------------
+
+Near:
+
+Description:
+If the relative positioning is not obvious, or it varies based on window size,
+you can use the near method to identify an element that is at most 50px away from the provided locator.
+One great use case for this is to work with a form element that doesn’t have an easily constructed locator,
+but its associated input label element does.
+
+
+By emailLocator = RelativeLocator.with(By.tagName("input")).near(By.id("lbl-email"));
+-------------------------------------------------------------------------------------------------------------------------
+
+Chaining relative locators:
+
+Description:
+You can also chain locators if needed. Sometimes the element is most easily identified
+as being both above/below one element and right/left of another
+
+
+By submitLocator = RelativeLocator.with(By.tagName("button")).below(By.id("email")).toRightOf(By.id("cancel"));
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
