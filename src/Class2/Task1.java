@@ -39,7 +39,7 @@ public class Task1 {
         Thread.sleep(900);
         driver.findElement(By.id("customer.password")).sendKeys("33@44");
         Thread.sleep(900);
-        driver.findElement(By.id("repeatedPasswor")).sendKeys("33@44");
+        driver.findElement(By.id("repeatedPassword")).sendKeys("33@44");
 
 
     //    driver.findElement(By.xpath("//input[@type='submit' and @value='Register']")).click();
