@@ -1,0 +1,26 @@
+driver.findElement(By.id("customer.firstName")).sendKeys("Rafik");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.lastName")).sendKeys("Ismayilov");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.street")).sendKeys("10 Main st");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.city")).sendKeys("Toronto");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.state")).sendKeys("Ontario");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.zipCode")).sendKeys("A1B-C2D");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.phoneNumber")).sendKeys("415-515-615");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.ssn")).sendKeys("122333");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.username")).sendKeys("IRafik");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.password")).sendKeys("11@22");
+        Thread.sleep(900);
+        driver.findElement(By.id("repeatedPassword")).sendKeys("11@22");
+
+    //    driver.findElement(By.xpath("//input[@type='submit' and @value='Register']")).click();
+
+        Thread.sleep(3000);
+        //driver.close();

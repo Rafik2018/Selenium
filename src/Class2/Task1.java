@@ -18,21 +18,33 @@ public class Task1 {
 
         driver.navigate().to("https://parabank.parasoft.com/parabank/register.htm;jsessionid=B8DD31FF0AFEDBDF4454B27BBC5C05B0");
         driver.manage().window().maximize();
-        driver.findElement(By.id("customer.firstName")).sendKeys("Rafik");
-        driver.findElement(By.id("customer.lastName")).sendKeys("Ismayilov");
-        driver.findElement(By.id("customer.address.street")).sendKeys("10 Main st");
-        driver.findElement(By.id("customer.address.city")).sendKeys("Toronto");
-        driver.findElement(By.id("customer.address.state")).sendKeys("Ontario");
-        driver.findElement(By.id("customer.address.zipCode")).sendKeys("A1B-C2D");
-        driver.findElement(By.id("customer.phoneNumber")).sendKeys("415-515-615");
-        driver.findElement(By.id("customer.ssn")).sendKeys("122333");
-        driver.findElement(By.id("customer.username")).sendKeys("IRafik");
-        driver.findElement(By.id("customer.password")).sendKeys("11@22");
-        driver.findElement(By.id("repeatedPassword")).sendKeys("11@22");
 
-        driver.findElement(By.className("button")).click();
+        driver.findElement(By.id("customer.firstName")).sendKeys("Robert");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.lastName")).sendKeys("Grey");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.street")).sendKeys("111 Main st");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.city")).sendKeys("Orlando");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.state")).sendKeys("Florida");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.address.zipCode")).sendKeys("A1B-B2A");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.phoneNumber")).sendKeys("411-555-616");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.ssn")).sendKeys("12233");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.username")).sendKeys("RobertG");
+        Thread.sleep(900);
+        driver.findElement(By.id("customer.password")).sendKeys("33@44");
+        Thread.sleep(900);
+        driver.findElement(By.id("repeatedPasswor")).sendKeys("33@44");
 
-        Thread.sleep(4000);
+
+    //    driver.findElement(By.xpath("//input[@type='submit' and @value='Register']")).click();
+
+        Thread.sleep(3000);
         driver.close();
 
 
