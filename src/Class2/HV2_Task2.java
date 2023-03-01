@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Task2 {
+public class HV2_Task2 {
     public static void main(String[] args) throws InterruptedException {
 
        /* HW2

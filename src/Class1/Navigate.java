@@ -1,4 +1,4 @@
-package Class1;
+package class1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,7 +7,7 @@ public class Navigate {
     public static void main(String[] args) throws InterruptedException {
 
 //        connect to webDriver
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 //        initate the instance of Webdriver
         WebDriver driver = new ChromeDriver();
 //        open google .com
@@ -20,7 +20,7 @@ public class Navigate {
         Thread.sleep(2000);
 //        go back
         driver.navigate().back();
-        //        slow down
+//        slow down
         Thread.sleep(2000);
 //        goto facebook
         driver.navigate().forward();

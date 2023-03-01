@@ -1,4 +1,4 @@
-package Class1;
+package class1;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +8,7 @@ public class LaunchBrowser {
 
 //        tell your project where the webdriver is located.
 //        for mac user please do not use .exe with chromedriver
-        System.setProperty("webdriver.chrome.driver", "Driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 
 //        create an instance of WebDriver
         WebDriver driver = new ChromeDriver();
@@ -26,7 +26,7 @@ public class LaunchBrowser {
 //        print the title of the page
         System.out.println("the title of the page is " + title);
 
-//slow down for 3 seconds
+//      slow down for 3 seconds
         Thread.sleep(3000);
 //        close the browser
 

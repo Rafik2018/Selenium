@@ -1,29 +1,30 @@
-package Class2;
+package class2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class webDriverTask {
+public class WebDriverTask {
 
     public static void main(String[] args) {
 
+//        tell your project where the webdriver is located.
+//        for mac user please do not use .exe with chromedriver
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
-
-        //create an instance of WebDriver
+//        create an instance of WebDriver
         WebDriver driver=new ChromeDriver();
-
-        // open up website
+//        open up the website
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
+//        maximize the screen
+        driver.manage().window().maximize();
 
-                //maximize the screen
-                driver.manage().window().maximize();
-
-        //send the username
+//        send the username
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
-// send the password
+//        send the pasword
         driver.findElement(By.name("ctl00$MainContent$password")).sendKeys("test");
-//click on the login button
+//        click on the login button
         driver.findElement(By.className("button")).click();
+
+
     }
 }
