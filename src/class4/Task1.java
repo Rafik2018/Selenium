@@ -6,23 +6,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         /* check if the check box    "click on this check box" is Selected
         if no  Select the check box
         check gain if the checkbox is Selected or not*/
 
-//        tell your project where the webdriver is located.
-//        for mac user please do not use .exe with chromedriver
+//      tell your project where the webdriver is located.
+//      for mac user please do not use .exe with chromedriver
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-//       create an instance of WebDriver
+//      create an instance of WebDriver
         WebDriver driver = new ChromeDriver();
-//        max the window
+//      max the window
         driver.manage().window().maximize();
-//        goto syntaxprojects.com
+//      goto syntaxprojects.com
         driver.get("http://practice.syntaxtechs.net/basic-checkbox-demo.php");
+        Thread.sleep(2000);
         WebElement checkBtn = driver.findElement(By.cssSelector("input[id='isAgeSelected']"));
         boolean isSelectedBtn = checkBtn.isSelected();
         System.out.println("Is checkbox selected? " + isSelectedBtn);
+
         if (!isSelectedBtn) {
           checkBtn.click();
         }
@@ -31,5 +33,5 @@ public class Task1 {
 
     }
 
-
 }
+
